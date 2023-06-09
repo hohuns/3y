@@ -37,12 +37,12 @@ function FirstAct() {
     backgroundImage: "linear-gradient(to right bottom, #4ca1af , #c4e0e5)",
     flexDirection: "column",
     gap: 3,
+    overflow: "hidden",
   };
   const buttonStyle = {
     color: "white",
     borderColor: "white",
     fontWeight: 100,
-    borderWidth: 0.1,
   };
 
   // Everytime component is renedered then shuffled image
@@ -57,8 +57,6 @@ function FirstAct() {
       alert("Failed..!💣💥💥 Please try again.");
     }
   };
-
-  console.log(img);
 
   return (
     <Box sx={boxStyle}>
@@ -75,7 +73,7 @@ function FirstAct() {
         width={350}
         height={400}
         image={img}
-        finishPercent={70}
+        finishPercent={40}
         onComplete={completeHandler}
       >
         <div
