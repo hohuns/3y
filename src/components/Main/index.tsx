@@ -21,10 +21,6 @@ function Main() {
     alignItems: "center",
     maxWidth: "40rem",
     height: "100vh",
-    padding: "21rem",
-    "&:active": {
-      opacity: [0.9, 0.8, 0.7, 0.2],
-    },
     backgroundImage: "linear-gradient(to right bottom, #4ca1af , #c4e0e5)",
     flexDirection: "column",
     gap: 3,

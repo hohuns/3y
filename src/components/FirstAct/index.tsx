@@ -13,25 +13,19 @@ import img9 from "../../assets/images/img9.png";
 import img10 from "../../assets/images/img10.png";
 import { useNavigate } from "react-router-dom";
 
+const imgArray = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
+const imageHandler = () => {
+  let tmpImg = imgArray;
+  const shuffled = tmpImg?.sort(() => Math.random() - 0.5);
+  return shuffled[0];
+};
+
 function FirstAct() {
-  const [currentHeight, setCurrentHeight] = useState<number>(
-    window.innerHeight
-  );
-  const [currentWidth, setCurrentWidth] = useState<number>(window.innerWidth);
+  const img = imageHandler();
+
   const prob: number = Math.floor(Math.random() * 10);
   let navigate = useNavigate();
-  const imgArray = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-  ];
   const boxStyle = {
     display: "flex",
     margin: "0 auto",
@@ -40,9 +34,6 @@ function FirstAct() {
     maxWidth: "40rem",
     height: "100vh",
     padding: "1rem",
-    "&:active": {
-      opacity: [0.9, 0.8, 0.7, 0.2],
-    },
     backgroundImage: "linear-gradient(to right bottom, #4ca1af , #c4e0e5)",
     flexDirection: "column",
     gap: 3,
@@ -52,13 +43,6 @@ function FirstAct() {
     borderColor: "white",
     fontWeight: 100,
     borderWidth: 0.1,
-  };
-
-  //Button functions
-  const imageHandler = () => {
-    let tmpImg = imgArray;
-    const shuffled = tmpImg?.sort(() => Math.random() - 0.5);
-    return shuffled[0];
   };
 
   // Everytime component is renedered then shuffled image
@@ -74,6 +58,8 @@ function FirstAct() {
     }
   };
 
+  console.log(img);
+
   return (
     <Box sx={boxStyle}>
       <Button
@@ -86,10 +72,10 @@ function FirstAct() {
         back
       </Button>
       <ScratchCard
-        width={currentWidth < 640 ? currentWidth : 640}
-        height={currentHeight / 2}
-        image={imageHandler()}
-        finishPercent={60}
+        width={350}
+        height={400}
+        image={img}
+        finishPercent={70}
         onComplete={completeHandler}
       >
         <div
