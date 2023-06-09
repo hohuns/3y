@@ -78,7 +78,7 @@ function Main() {
       <Lottie animationData={lottieImage} />
       {moment(value)
         .format("YYYY/MM/DD, h:mm:ss A")
-        ?.includes("2023/06/09") && (
+        ?.includes("2023/06/10") && (
         <Button
           variant="outlined"
           sx={buttonStyle}
@@ -86,12 +86,12 @@ function Main() {
             navigate("/firstact");
           }}
         >
-          First Act
+          First Lottery
         </Button>
       )}
       {moment(value)
         .format("YYYY/MM/DD, h:mm:ss A")
-        ?.includes("2023/06/09") && (
+        ?.includes("2023/06/17") && (
         <Button
           variant="outlined"
           sx={buttonStyle}
@@ -99,7 +99,7 @@ function Main() {
             navigate("/secondact");
           }}
         >
-          Second Act
+          Second Lottery
         </Button>
       )}
     </Box>
