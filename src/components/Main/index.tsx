@@ -91,7 +91,7 @@ function Main() {
       )}
       {moment(value)
         .format("YYYY/MM/DD, h:mm:ss A")
-        ?.includes("2023/06/17") && (
+        ?.includes("2023/06/11") && (
         <Button
           variant="outlined"
           sx={buttonStyle}
@@ -100,6 +100,19 @@ function Main() {
           }}
         >
           Second Lottery
+        </Button>
+      )}
+      {moment(value)
+        .format("YYYY/MM/DD, h:mm:ss A")
+        ?.includes("2023/06/11") && (
+        <Button
+          variant="outlined"
+          sx={buttonStyle}
+          onClick={() => {
+            navigate("/decode");
+          }}
+        >
+          Decode
         </Button>
       )}
     </Box>
