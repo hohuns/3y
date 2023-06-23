@@ -50,6 +50,18 @@ function Main() {
       setGreeting("Good Morning. Sarah. You can try second act now.");
     } else if (temp?.includes("2023/06/17") && temp.includes("PM")) {
       setGreeting("Good Afternoon. Sarah. You can try second act now.");
+    } else if (
+      temp?.includes("2023/06/23") ||
+      temp.includes("AM") ||
+      temp.includes("PM")
+    ) {
+      setGreeting("Happy 3y. 우리 이쁜이. 1 Day left for decoding my letter.");
+    } else if (
+      temp?.includes("2023/06/24") ||
+      temp.includes("AM") ||
+      temp.includes("PM")
+    ) {
+      setGreeting("우리 이쁜이 편지 decoding 해보자.");
     } else if (temp.includes("AM")) {
       setGreeting("Good morning. Sarah");
     } else if (temp.includes("PM")) {
@@ -104,7 +116,7 @@ function Main() {
       )}
       {moment(value)
         .format("YYYY/MM/DD, h:mm:ss A")
-        ?.includes("2023/06/11") && (
+        ?.includes("2023/06/24") && (
         <Button
           variant="outlined"
           sx={buttonStyle}
